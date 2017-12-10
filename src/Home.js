@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {ciPanoramaServer} from './Server';
 import ProjectTitle from './ProjectTitle';
 import ProjectGroup from './ProjectGroup';
+import CustomHr from './CustomHr';
+import ServerAdmin from './ServerAdmin';
 import './resources/Home.css';
 
 class Home extends Component {
@@ -18,10 +20,11 @@ class Home extends Component {
   handleSelectProject(projectGroup){
     
     var keepAvailableProjectGroups = this.state.availableProjectGroups;
+    var selectedProjectGroup = this.state.selectedProjectGroup !== projectGroup ? projectGroup : null;
 
     this.setState({ 
       availableProjectGroups : keepAvailableProjectGroups,
-      selectedProjectGroup : projectGroup 
+      selectedProjectGroup : selectedProjectGroup 
     })
   }
 
@@ -33,7 +36,8 @@ class Home extends Component {
        return (
         <span>
           <ProjectTitle
-            key={projectGroup.code} 
+            key={projectGroup.code}
+            selected={this.state.selectedProjectGroup === projectGroup} 
             projectGroup={projectGroup}
             onclick={() => this.handleSelectProject(projectGroup)}/>
             {i<a.length-1?" / ":""}
@@ -44,9 +48,10 @@ class Home extends Component {
     return (
         <div className="home">
           <h3>Projects : {projectTitles}</h3>
-          -----------------------------------------------------------------------------------------------------
-          <ProjectGroup project={this.state.selectedProjectGroup}/>
-          -----------------------------------------------------------------------------------------------------
+          <ProjectGroup project={this.state.selectedProjectGroup} closeAction={() => this.handleSelectProject(null)}/>
+          <CustomHr level="1"/>
+          <ServerAdmin/>
+          <CustomHr level="1"/>
         </div>
     );
   }

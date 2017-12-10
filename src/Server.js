@@ -21,6 +21,12 @@ class Server {
             .then(res => res.json())
             .then(jsonCallback);
     }
+
+    getWithoutBody(serviceCall, jsonCallback){
+        var callUri = this.getRestUrl(serviceCall);
+        fetch(callUri) 
+            .then(jsonCallback);
+    }
 }
 
 export const ciPanoramaServer = new Server();

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {ciPanoramaServer} from './Server';
 
 class Header extends Component {
   render() {

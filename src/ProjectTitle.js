@@ -4,7 +4,10 @@ class ProjectTitle extends Component {
 
   render() {
     return (
-        <span className="projectTitle" onClick={() => this.props.onclick()}>{this.props.projectGroup.code}</span>
+        <span 
+          className={this.props.selected ? "projectTitle selected" : "projectTitle"}
+          onClick={() => this.props.onclick()}
+        >{this.props.projectGroup.code}</span>
     );
   }
   

@@ -10,6 +10,11 @@
   padding-left: 30px;
 }
 
+h2 small, h3 small {
+  font-weight: normal !important;
+  font-size: 13px;
+}
+
 .header {
   background-image: url("./panorama.png");
   height: 80px;
@@ -17,92 +22,6 @@
   font-size: 12px;
   font-weight: bold;
 }
-/*
-.header .badges {
-  height: 20px;
-  color: #f70;
-  margin: 10px 15px;
-  display: block;
-  float: left;
-}
-
-.title {
-  font-size: 20px;
-  color: #f70;
-  font-weight: bold;
-  float: left;
-  display: block;
-  margin:0;
-  width:100%;
-}
-
-.header .search {
-  height: 40px; 
-  margin: 0px 15px;
-  display: block;
-  float: right;
-}
-
-.header .search input {
-  height: 26px;
-  width: 300px;
-  margin: 7px 0px; 
-  padding: 0px 5px;
-  border: none!important;
-  border-radius: 5px;
-  background-color: #555;
-  display: block;
-  color: #ccc;
-  font-weight: bold;
-}
-
-.header .search input:focus {
-  color: #fff;
-}
-
-.header .menu {
-  height: 40px;
-  margin: 0px 15px;
-  display: block;
-  float: right;
-}
-
-.header .logo {
-  height: 20px; 
-  margin: 5px 15px;
-  display: block;
-  float: right;
-}
-
-.header .menu .item {
-  width: 60px;
-  height: 40px;
-  font-size: 13px;
-  display: block;
-  float: left;
-  text-align: center;
-}
-
-.menu .item a, .menu .item a:visited, .menu .item a:hover  {
-  width: 100%;
-  display: block;
-  text-decoration: none;
-  margin-top: 13px;
-  color: #bbb;
-}
-
-.menu .item a:hover  {
-  color: #fff;
-}
-
-.menu .item.selected a {
-  color: #fff;
-}
-
-.logo img {
-  height: 20px;
-}
-*/
 
 .home {
   padding: 10px 15px;
@@ -116,7 +35,7 @@
   background-color: #fff;
 }
 
-.footer .badges-backend {
+.footer .badgesBackend {
   line-height: 15px;
   display: block;
   float: right;
@@ -131,6 +50,72 @@
   cursor: pointer;
 }
 
+.projectTitle.selected {
+  text-decoration: underline;
+  color: #000;
+  font-weight: bold;
+}
+
 .projectGroup {
   background-color: #fff;
+}
+
+.versionsHistory {
+  display: block;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.customHr1 {
+  font-weight: bold;
+}
+
+.customHr2,.customHr3 {
+  color: #CCC;
+}
+
+.closeButton {
+  font-weight: bold;
+  cursor: pointer;
+  color: #F00;
+}
+
+.closeButton:hover {
+  color: #000;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link.selected {
+  text-decoration: underline;
+  color: #000;
+  font-weight: bold;
+}
+
+.list span {
+  display: block;
+}
+
+table {
+  border-spacing : 0;
+  border-collapse : collapse;
+}
+
+th {
+  border: #DDD solid 1px;
+  background-color: #EEE;
+  padding: 2px 5px;
+}
+
+td {
+  border: #DDD solid 1px;
+  padding: 2px 5px;
+}
+
+td.smallCellText {
+  font-size: 13px;
 }
